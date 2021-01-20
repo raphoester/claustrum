@@ -30,7 +30,7 @@
          
           
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{url('/signout')}}">Déconnexion</a>
+          <a class="dropdown-item" href="{{url('/logout')}}">Déconnexion</a>
 
         </div>
       </li>
