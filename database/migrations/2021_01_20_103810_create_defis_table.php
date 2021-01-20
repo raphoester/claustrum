@@ -15,6 +15,9 @@ class CreateDefisTable extends Migration
     {
         Schema::create('defis', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->string('link');
             $table->string('password');
             $table->enum("level", array('1', '2', '3', '4', '5'));
             $table->timestamps();

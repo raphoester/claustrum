@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Defi extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'link',
+        'level'
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 }
