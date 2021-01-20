@@ -23,7 +23,9 @@ Auth::routes();
 
 Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories'])->name('liste_catego_defis');
 
-Route::get('/defis/{catego}', [App\Http\Controllers\DefisController::class, 'categorie']);
+Route::get('/defis/{catego}', [App\Http\Controllers\DefisController::class, 'focus_categorie']);
+
+Route::get('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class, 'focus_defi']);
 
 Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
 
