@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,18 +18,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Auth::routes();
 
+Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories'])->name('liste_catego_defis');
 
-Route::get('/challenges', function () {
-    return view('challenges');
-});
+Route::get('/challenges/categorie/{catego}', [App\Http\Controllers\DefisController::class, 'liste_defis'])->name('menu');
 
-Route::get('/forum', function () {
-    return view('forum');
-});
-
-
+Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
