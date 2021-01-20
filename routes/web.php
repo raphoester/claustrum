@@ -21,6 +21,21 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+//raphael 
+
 Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories'])->name('liste_catego_defis');
 
 Route::get('/challenges/categorie/{catego}', [App\Http\Controllers\DefisController::class, 'liste_defis'])->name('menu');
+
+//clement
+
+Route::get('/challenges', function () {
+    return view('challenges');
+});
+
+Route::get('/forum', function () {
+    return view('forum');
+});
+
+
