@@ -19,7 +19,8 @@ class CreateDefisTable extends Migration
             $table->text('description');
             $table->string('link');
             $table->string('password');
-            $table->enum("level", array('1', '2', '3', '4', '5'));
+            $table->enum("category", array("web_client", "web_serveur", "linux"));
+            $table->enum("level", array(1, 2, 3, 4, 5));
             $table->timestamps();
         });
     }
