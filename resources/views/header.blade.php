@@ -3,19 +3,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil </a>
+        <a class="nav-link" href="{{url('/')}}">Accueil </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Forum </a>
+        <a class="nav-link" href="{{url('/forum')}}">Forum </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Challenges </a>
+        <a class="nav-link" href="{{url('/challenge')}}">Challenges </a>
       </li>
 
       @if(auth()->guest())
 
       <li class="nav-item active">
-        <a class="nav-link" href="{{url('/connexion')}}">Connexion/Inscription </a>
+        <a class="nav-link" href="{{url('/connexion')}}"></a>
       </li>
 
       @else
@@ -27,8 +27,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mon profil</a>
           <a class="dropdown-item" href="#">Changer mes informations confidentielles</a>
-          <a class="dropdown-item" href=" {{url('/news_feed')}}">Newsfeed</a>
-          <a class="dropdown-item" href=" {{url('/dashboard')}}">Dashboard</a>
          
           
           <div class="dropdown-divider"></div>
@@ -44,9 +42,12 @@
 
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+  
+
+    <span class="navbar-text">
+      <a class="nav-link" href="{{url('/login')}}">Connexion</a>
+      <a class="nav-link" href="{{url('/register')}}">Inscription </a>
+    </span>
+ 
   </div>
 </nav>
