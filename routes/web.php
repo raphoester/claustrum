@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories'])->name('liste_catego_defis');
 
-Route::get('/challenges/categorie/{catego}', [App\Http\Controllers\DefisController::class, 'liste_defis'])->name('menu');
+Route::get('/defis/{catego}', [App\Http\Controllers\DefisController::class, 'categorie']);
 
 Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
 
