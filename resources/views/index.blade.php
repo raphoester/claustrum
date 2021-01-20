@@ -1,5 +1,6 @@
 @extends('layouts/app')
-@section('content')
+
+@section('contenu')
 
 <h1>Claustrum</h1>
 

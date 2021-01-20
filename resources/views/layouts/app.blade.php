@@ -49,7 +49,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/challenges')}}">{{ __('Challenges') }}</a>
+                            <a class="nav-link" href="{{url('/defis')}}">{{ __('Défis') }}</a>
                         </li>
 
                        

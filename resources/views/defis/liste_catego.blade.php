@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('contenu')
-<h1>liste des catégories de défis</h1>
-@endsection('contenu')
+<h1>Liste des catégories de défis</h1>
+@endsection
