@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9ed5073ffda6ba87780c21048621cd0f712b4400',
+    'reference' => '024dc538d6c5a28b19498f8548951c201321d16c',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -452,6 +452,15 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'laracasts/flash' => 
+    array (
+      'pretty_version' => '3.2',
+      'version' => '3.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '76c2e200498795bdbeda97b682536130316e8b97',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v8.23.0',
@@ -468,7 +477,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9ed5073ffda6ba87780c21048621cd0f712b4400',
+      'reference' => '024dc538d6c5a28b19498f8548951c201321d16c',
     ),
     'laravel/sail' => 
     array (

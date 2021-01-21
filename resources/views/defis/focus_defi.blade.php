@@ -26,7 +26,9 @@
                 <a href="{{$defi->link}}">Page d'accès</a>
             </div>
             
-            <form action="POST">
+            <form action="" method="POST">
+                @csrf
+                
                 <label for="mdp_defi"></label>
                 <input type="password" id="mdp_defi" name="mdp_defi">
                 <label for="valider_defi"></label>
