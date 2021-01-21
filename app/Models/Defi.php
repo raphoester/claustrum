@@ -12,6 +12,7 @@ class Defi extends Model
     protected $fillable = [
         'title',
         'description',
+        'category',
         'link',
         'level'
     ];

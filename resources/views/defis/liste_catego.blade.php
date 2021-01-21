@@ -1,4 +1,31 @@
 @extends('layouts.app')
 @section('contenu')
-<h1>Liste des catégories de défis</h1>
+
+<div>
+    <h1>Défis par catégorie</h1>
+    <div>
+        <div>
+            <div>
+                <h3>
+                    <a href="/defis/web_serveur">Web_serveur</a>
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    <a href="/defis/web_client">Web_client</a>
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    <a href="/defis/linux">Linux</a>
+                </h3>
+            </div>
+            
+
+        </div>
+
+    </div>
+</div>
+
+
 @endsection

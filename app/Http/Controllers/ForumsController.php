@@ -10,4 +10,6 @@ class ForumsController extends Controller
     {
         return view('forum/accueil');
     }
+
+    
 }

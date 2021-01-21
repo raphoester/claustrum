@@ -24,9 +24,10 @@ Auth::routes();
 
 Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories'])->name('liste_catego_defis');
 
-Route::get('/challenges/categorie/{catego}', [App\Http\Controllers\DefisController::class, 'liste_defis'])->name('menu');
+Route::get('/defis/{catego}', [App\Http\Controllers\DefisController::class, 'focus_categorie']);
+
+Route::get('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class, 'focus_defi']);
 
 Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
 
-
-Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
+Route::post('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class, 'validation_defi']);
