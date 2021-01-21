@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC+2',
+    'timezone' => 'Europe/Paris',
 
     /*
     |--------------------------------------------------------------------------
@@ -226,8 +226,5 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Laracasts\Flash\FlashServiceProvider',
-        'Flash' => 'Laracasts\Flash\Flash'
     ],
-
 ];

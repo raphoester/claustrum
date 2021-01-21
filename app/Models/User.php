@@ -40,4 +40,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function accomplir($id_defi){
+        $user = auth()->user();
+        $defi = \App\Models\Defi::where('id', $id_defi);
+
+        $user->$defi()->attach($user);
+
+        flash("fonction accomplir terminée.");
+    } 
+
+    public function defisAccomplis(){
+        return $this->belongsToMany(Defi::class);
+    }
 }
