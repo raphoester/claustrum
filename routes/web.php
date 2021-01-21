@@ -27,3 +27,6 @@ Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories']
 Route::get('/challenges/categorie/{catego}', [App\Http\Controllers\DefisController::class, 'liste_defis'])->name('menu');
 
 Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
+
+
+Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");

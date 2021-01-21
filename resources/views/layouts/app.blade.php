@@ -49,7 +49,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/challenges')}}">{{ __('Challenges') }}</a>
+                            <a class="nav-link" href="{{url('/defis')}}">{{ __('Défis') }}</a>
                         </li>
 
                        
@@ -100,7 +100,7 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @yield('contenu')
         </main>
     </div>
     <footer class="bg-light text-center text-lg-start">

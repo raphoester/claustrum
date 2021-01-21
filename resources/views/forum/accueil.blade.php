@@ -1,6 +1,6 @@
 @extends('layouts/app')
 
-@section('content')
+@section('contenu')
 <p>Ceci est la page de Forum</p>
 
 @endsection
