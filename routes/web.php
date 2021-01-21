@@ -31,3 +31,7 @@ Route::get('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class,
 Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
 
 Route::post('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class, 'validation_defi'], );
+
+Route::get('/profil', [App\Http\Controllers\UsersController::class, 'profil'], );
+
+
