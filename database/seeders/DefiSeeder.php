@@ -23,7 +23,8 @@ class DefiSeeder extends Seeder
             'password' => Hash::make('password'),
             'category' => $categories[array_rand($categories)],
             'level' => array_rand(array(1, 2, 3, 4, 5)),
-            'link' => "http://".Str::random(10).".com"
+            'link' => "http://".Str::random(10).".com",
+            'created_at' => time()
         ]);
     }
 }
