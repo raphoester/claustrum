@@ -538,6 +538,7 @@ class ComposerStaticInit9919913518346826e32fc78f79a4092a
         'App\\Http\\Controllers\\DefisController' => __DIR__ . '/../..' . '/app/Http/Controllers/DefisController.php',
         'App\\Http\\Controllers\\ForumsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ForumsController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
