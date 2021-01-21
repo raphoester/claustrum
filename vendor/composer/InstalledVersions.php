@@ -477,7 +477,11 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
+<<<<<<< HEAD
       'reference' => '295ca273d09705723456fad288dd55f512cbe585',
+=======
+      'reference' => '60ff1f42f7db0460864947d4803634e9438fce59',
+>>>>>>> 4222eddd1d143daaaa1e84370416e94d878eedb1
     ),
     'laravel/sail' => 
     array (

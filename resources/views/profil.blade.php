@@ -1,5 +1,5 @@
 @extends('layouts/app')
-@section('content')
+@section('contenu')
 
 @foreach($users as $user)
 
@@ -35,7 +35,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Nom</label>
-                                                                    <input class="form-control" type="text" name="name" placeholder="name" value="{{$user->name}}">
+                                                                    <input class="form-control" type="text" name="name" placeholder="{{$user->name}}" >
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -56,15 +56,7 @@
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="form-group">
-                                                                    <label>Current Password</label>
-                                                                    <input class="form-control" type="password" placeholder="{{$user->password}}">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-group">
-                                                                    <label>New Password</label>
+                                                                    <label>Mot de passe actuel</label>
                                                                     <input class="form-control" type="password" placeholder="••••••">
                                                                 </div>
                                                             </div>
@@ -72,7 +64,15 @@
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="form-group">
-                                                                    <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
+                                                                    <label>Nouveau mot de passe</label>
+                                                                    <input class="form-control" type="password" placeholder="••••••">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Confirmer <span class="d-none d-xl-inline">mot de passe</span></label>
                                                                     <input class="form-control" type="password" placeholder="••••••">
                                                                 </div>
                                                             </div>
@@ -82,7 +82,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col d-flex justify-content-end">
-                                                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                                                        <button class="btn btn-primary" type="submit">Sauvegarder</button>
                                                     </div>
                                                 </div>
                                             </form>
