@@ -3,8 +3,6 @@
 
     <div class="container">
         <div class="row flex-lg-nowrap">
-
-
             <div class="col">
                 <div class="row">
                     <div class="col mb-3">
@@ -12,14 +10,11 @@
                             <div class="card-body">
                                 <div class="e-profile">
                                     <div class="row">
-
                                         <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                                             <div class="text-center text-sm-right">
-
                                                 <div class="text-muted"><small>{{$user->created_at}}</small></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="tab-content pt-3">
                                         <div class="tab-pane active">
@@ -42,7 +37,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -81,20 +75,17 @@
                                                     </div>
                                                 </div>
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
+</div>
 
     
 

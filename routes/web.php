@@ -34,6 +34,6 @@ Route::get('/forum/{id}', [App\Http\Controllers\ForumsController::class, 'index'
 
 Route::post('/defis/{catego}/{id}', [App\Http\Controllers\ValidationController::class, 'validation_defi']);
 
-Route::get('/profil', [App\Http\Controllers\UsersController::class, 'profil'], );
+Route::get('/profil/modification', [App\Http\Controllers\UsersController::class, 'modifierProfil']);
 
-
+Route::get('/u/{id}', [App\Http\Controllers\UsersController::class, 'profilU']);
