@@ -18,7 +18,7 @@ class ValidationController extends Controller
         if ($defi->password == $_POST['mdp_defi'])
         {
             if($user->defisAccomplis->contains($id)){
-                flash("La réponse est bonne, mais vous aviez déjà accompli le défi.");
+                flash("La réponse est bonne, mais vous aviez déjà accompli le défi auparavant.");
             }
             else
             {

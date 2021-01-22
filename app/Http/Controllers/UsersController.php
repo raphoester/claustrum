@@ -9,10 +9,10 @@ use App\Models\User as User;
 class UsersController extends Controller
 {
     public function profil(){
-        $users=User::all();
+        $user = auth()->user();
 
         return view('profil', [
-            'users' => $users
+            'users' => $user
         ]);
     }
 }
