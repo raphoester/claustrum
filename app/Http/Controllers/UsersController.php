@@ -12,7 +12,7 @@ class UsersController extends Controller
         $user = auth()->user();
 
         return view('profil', [
-            'users' => $user
+            'user' => $user
         ]);
     }
 }

@@ -1,11 +1,6 @@
 @extends('layouts/app')
 @section('contenu')
 
-@foreach($users as $user)
-
-@endforeach
-
-
     <div class="container">
         <div class="row flex-lg-nowrap">
 
