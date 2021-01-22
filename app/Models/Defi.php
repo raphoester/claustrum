@@ -23,6 +23,6 @@ class Defi extends Model
     ];
 
     public function accomplisseurs(){
-        return $this->belongsToMany(User::class);
+        return $this->BelongsToMany(User::class);
     }
 }
