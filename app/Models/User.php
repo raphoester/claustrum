@@ -45,4 +45,14 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Defi::class);
     }
+
+    public function messagesEnvoyes(){
+        return $this->belongsToMany(User::class, 'message', 'envoyeur_id', 'receveur_id');
+    }
+
+    public function messagesRecus(){
+        return $this->belongsToMany(User::class, 'message', 'receveur_id', 'envoyeur_id');
+    }
+
+
 }
