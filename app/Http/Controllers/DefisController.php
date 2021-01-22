@@ -23,15 +23,4 @@ class DefisController extends Controller
         $defi = Models\Defi::select()->where('category', $catego)->where('id', $id)->get();
         return view('defis/focus_defi')->with('defi', $defi[0]);
     }
-
-    public function validation_defi($catego, $id)
-    {
-        $defi = Models\Defi::select()->where('category', $catego)->where('id', $id)->get();
-        
-        if ($defi->password == $mdp_defi)
-        {
-            flash("Vous avez réussi le défi !");
-            return view("defis/focus_defi")->with('defi', $defi);
-        }
-    }
 }

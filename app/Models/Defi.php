@@ -21,4 +21,8 @@ class Defi extends Model
         'password',
         'remember_token',
     ];
+
+    public function accomplisseurs(){
+        return $this->BelongsToMany(User::class);
+    }
 }
