@@ -22,7 +22,7 @@ class Defi extends Model
         'remember_token',
     ];
 
-    public function defisAccomplis(){
+    public function accomplisseurs(){
         return $this->belongsToMany(User::class);
     }
 }
