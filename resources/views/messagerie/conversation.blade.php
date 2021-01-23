@@ -4,6 +4,9 @@
 <div class="container">
     <div>
         <div>
+            <a href="/messages">&#60 &#60 &#60 Retour en arrière</a>
+        </div>
+        <div>
             <h2>Conversation avec {{$interlocuteur->name}}</h2>
         </div>
         <div>

@@ -38,6 +38,8 @@ Route::get('/profil/modification', [App\Http\Controllers\UsersController::class,
 
 Route::get('/u/{id}', [App\Http\Controllers\UsersController::class, 'profilU']);
 
+Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'liste_convs']);
+
 Route::get('/messages/{id}', [App\Http\Controllers\MessagesController::class, 'affiche_conversation']);
 
 Route::post('messages/{id}', [App\Http\Controllers\MessagesController::class, 'nouveauMessage']);
