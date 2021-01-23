@@ -48,7 +48,7 @@
                     <div class="col-sm-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3">Défis </h6>
+                                <h6 class="d-flex align-items-center mb-3">Défis accomplis : {{ count($profil->defisAccomplis) }}</h6>
                                 <small>Web_client</small>
                                 <div class="progress mb-3" style="height: 5px">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"

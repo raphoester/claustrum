@@ -21,6 +21,7 @@ class DefisController extends Controller
     public function focus_defi($catego, $id)
     {
         $defi = Models\Defi::select()->where('category', $catego)->where('id', $id)->get();
+        //dd($defi[0]->getPossibleStatuses());
         return view('defis/focus_defi')->with('defi', $defi[0]);
     }
 }

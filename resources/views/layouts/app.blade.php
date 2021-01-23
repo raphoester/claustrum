@@ -81,14 +81,14 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href='u/{{Auth::user()->id}}'>
+                                <a class="dropdown-item" href='/u/{{Auth::user()->id}}'>
                                     {{ __('Mon profil') }}
                                 </a>
 
 
 
 
-                                <a class="dropdown-item" href='messages/'>
+                                <a class="dropdown-item" href='/messages'>
                                     {{ __('Messagerie') }}
                                 </a>
 
