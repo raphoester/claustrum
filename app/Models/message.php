@@ -9,9 +9,19 @@ class Message extends Model
 {
     
     use HasFactory;
-    protected $table = 'message';
     protected $fillable =[
         'contenu',
+        'envoyeur_id', 
+        'receveur_id'
     ];
     
+    public function destinataire()
+    {
+        return $this->belongsTo(User::class, 'receveur_id');
+    }
+
+    public function expediteur()
+    {
+        return $this->belongsTo(User::class, 'envoyeur_id');
+    }
 }

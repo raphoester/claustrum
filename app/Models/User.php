@@ -47,12 +47,10 @@ class User extends Authenticatable
     }
 
     public function messagesEnvoyes(){
-        return $this->belongsToMany(User::class, 'message', 'envoyeur_id', 'receveur_id');
+        return $this->hasMany(Message::class, 'envoyeur_id');
     }
 
     public function messagesRecus(){
-        return $this->belongsToMany(User::class, 'message', 'receveur_id', 'envoyeur_id');
+        return $this->hasMany(Message::class, 'receveur_id');
     }
-
-
 }

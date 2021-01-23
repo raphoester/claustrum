@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('contenu')
 
-{{dd($conversation)}}
-
 <div class="container">
     <div>
         <div>
@@ -11,7 +9,13 @@
         <div>
             <div>
                 @foreach($conversation as $message)
-                    {{ $message->contenu }}
+                    @if($message->receveur_id == $interlocuteur->id && $message->envoyeur_id == $connecte->id)
+                        <div style="color: blue;">{{ $message->contenu }}</div>  
+                    @elseif($message->receveur_id == $connecte->id && $message->envoyeur_id == $interlocuteur->id)
+                        <div style="color: grey;">{{ $message->contenu }}</div>
+                    @else
+                        <div style="color:red; font-weight: bold;">ERREUR</div>
+                    @endif
                 @endforeach
             </div>
             <div>
