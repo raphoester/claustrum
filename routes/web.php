@@ -43,3 +43,7 @@ Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'liste_
 Route::get('/messages/{id}', [App\Http\Controllers\MessagesController::class, 'affiche_conversation']);
 
 Route::post('messages/{id}', [App\Http\Controllers\MessagesController::class, 'nouveauMessage']);
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
