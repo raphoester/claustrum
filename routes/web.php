@@ -14,6 +14,12 @@ Use App\Http\Controllers\UsersController;
 |
 */
 
+// Route::domain('{categorie}.localhost:8000')->group(function () {
+
+
+// });
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -42,8 +48,18 @@ Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'liste_
 
 Route::get('/messages/{id}', [App\Http\Controllers\MessagesController::class, 'affiche_conversation']);
 
-Route::post('messages/{id}', [App\Http\Controllers\MessagesController::class, 'nouveauMessage']);
+Route::post('/messages/{id}', [App\Http\Controllers\MessagesController::class, 'nouveauMessage']);
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+Route::get("/d/{id}", [App\Http\Controllers\DefisController::class, 'accesDefi']);
+
+Route::get('/admin',  [App\Http\Controllers\AdminsController::class, 'index']);
+
+Route::get('/admin/defis', [App\Http\Controllers\AdminsController::class, 'liste_defis']);
+
+Route::get('/admin/nDefi',  [App\Http\Controllers\AdminsController::class, 'creation_defi']);
+
+Route::post('/admin/nDefi',  [App\Http\Controllers\AdminsController::class, 'creer_defi']);
+
+Route::get('/admin/utilisateurs', [App\Http\Controllers\AdminsController::class, 'liste_utilisateurs']);
+
+

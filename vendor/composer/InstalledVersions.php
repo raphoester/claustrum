@@ -29,20 +29,11 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '99a76c85d300ad9a9292b5dfc40eef9d5508ac9c',
+    'reference' => 'a9955a3d63866c93e6997c36fe658ac2273f7b0f',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
-    'arrilot/laravel-widgets' => 
-    array (
-      'pretty_version' => '3.13.1',
-      'version' => '3.13.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ae0e44ce625026ae71c6ab9259f89f13af227e37',
-    ),
     'asm89/stack-cors' => 
     array (
       'pretty_version' => 'v2.0.2',
@@ -60,51 +51,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '283a40c901101e66de7061bd359252c013dcc43c',
-    ),
-    'composer/ca-bundle' => 
-    array (
-      'pretty_version' => '1.2.9',
-      'version' => '1.2.9.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '78a0e288fdcebf92aa2318a8d3656168da6ac1a5',
-    ),
-    'composer/composer' => 
-    array (
-      'pretty_version' => '2.0.8',
-      'version' => '2.0.8.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '62139b2806178adb979d76bd3437534a1a9fd490',
-    ),
-    'composer/semver' => 
-    array (
-      'pretty_version' => '3.2.4',
-      'version' => '3.2.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'a02fdf930a3c1c3ed3a49b5f63859c0c20e10464',
-    ),
-    'composer/spdx-licenses' => 
-    array (
-      'pretty_version' => '1.5.5',
-      'version' => '1.5.5.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'de30328a7af8680efdc03e396aad24befd513200',
-    ),
-    'composer/xdebug-handler' => 
-    array (
-      'pretty_version' => '1.4.5',
-      'version' => '1.4.5.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f28d44c286812c714741478d968104c5e604a1d4',
     ),
     'cordoval/hamcrest-php' => 
     array (
@@ -128,33 +74,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
-    ),
-    'doctrine/cache' => 
-    array (
-      'pretty_version' => '1.10.2',
-      'version' => '1.10.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '13e3381b25847283a91948d04640543941309727',
-    ),
-    'doctrine/dbal' => 
-    array (
-      'pretty_version' => '2.12.1',
-      'version' => '2.12.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'adce7a954a1c2f14f85e94aed90c8489af204086',
-    ),
-    'doctrine/event-manager' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
     ),
     'doctrine/inflector' => 
     array (
@@ -526,24 +445,6 @@ private static $installed = array (
         0 => 'v8.23.0',
       ),
     ),
-    'intervention/image' => 
-    array (
-      'pretty_version' => '2.5.1',
-      'version' => '2.5.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
-    ),
-    'justinrainbow/json-schema' => 
-    array (
-      'pretty_version' => '5.2.10',
-      'version' => '5.2.10.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b',
-    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -559,33 +460,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '76c2e200498795bdbeda97b682536130316e8b97',
-    ),
-    'larapack/doctrine-support' => 
-    array (
-      'pretty_version' => 'v0.1.9',
-      'version' => '0.1.9.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ab6e821c467704ae91a9a944e6ebdaad6a99a294',
-    ),
-    'larapack/hooks' => 
-    array (
-      'pretty_version' => 'v1.0.12',
-      'version' => '1.0.12.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ce2c8c078a56036c357f26036174412cb9059f8e',
-    ),
-    'larapack/voyager-hooks' => 
-    array (
-      'pretty_version' => 'v1.2.3',
-      'version' => '1.2.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1a54df95b4179a9d26e9aacbd8676c8ccd78be0e',
     ),
     'laravel/framework' => 
     array (
@@ -603,7 +477,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '99a76c85d300ad9a9292b5dfc40eef9d5508ac9c',
+      'reference' => 'a9955a3d63866c93e6997c36fe658ac2273f7b0f',
     ),
     'laravel/sail' => 
     array (
@@ -976,15 +850,6 @@ private static $installed = array (
       ),
       'reference' => 'cd4032040a750077205918c86049aa0f43d22947',
     ),
-    'react/promise' => 
-    array (
-      'pretty_version' => 'v2.8.0',
-      'version' => '2.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f3cff96a19736714524ca0dd1d4130de73dbbbc4',
-    ),
     'rhumsaa/uuid' => 
     array (
       'replaced' => 
@@ -1136,24 +1001,6 @@ private static $installed = array (
       ),
       'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
     ),
-    'seld/jsonlint' => 
-    array (
-      'pretty_version' => '1.8.3',
-      'version' => '1.8.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '9ad6ce79c342fbd44df10ea95511a1b24dee5b57',
-    ),
-    'seld/phar-utils' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8674b1d84ffb47cc59a101f5d5a3b61e87d23796',
-    ),
     'swiftmailer/swiftmailer' => 
     array (
       'pretty_version' => 'v6.2.5',
@@ -1223,15 +1070,6 @@ private static $installed = array (
       array (
         0 => '2.0',
       ),
-    ),
-    'symfony/filesystem' => 
-    array (
-      'pretty_version' => 'v5.2.1',
-      'version' => '5.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'fa8f8cab6b65e2d99a118e082935344c5ba8c60d',
     ),
     'symfony/finder' => 
     array (
@@ -1428,15 +1266,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '13e7e882eaa55863faa7c4ad7c60f12f1a8b5089',
-    ),
-    'tcg/voyager' => 
-    array (
-      'pretty_version' => '1.x-dev',
-      'version' => '1.9999999.9999999.9999999-dev',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e9160b7c102862797dbfe0c69cce3c1335ae3c9b',
     ),
     'theseer/tokenizer' => 
     array (
