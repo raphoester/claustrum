@@ -30,7 +30,9 @@ Route::get('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class,
 
 Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
 
-Route::get('/forum/{id}', [App\Http\Controllers\ForumsController::class, 'index']);
+Route::get('/forum/publication', [App\Http\Controllers\ForumsController::class, 'publication']);
+
+Route::get('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'newpublication']);
 
 Route::post('/defis/{catego}/{id}', [App\Http\Controllers\ValidationController::class, 'validation_defi']);
 
