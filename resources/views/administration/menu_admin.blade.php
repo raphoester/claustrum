@@ -32,14 +32,14 @@
             </li>
             <li>
                 <div>
-                    <h4>Section xxx</h4>
+                    <h4>Forum</h4>
                 </div>
                 <ul>
                     <li>
-                        <a href="#">lien xxx</a>
+                        <a href="#">Sujets du forum</a>
                     </li>
                     <li>
-                        <a href="#">lien xxx2</a>
+                        <a href="#">lien xxx</a>
                     </li>
                 </ul>
             </li>
