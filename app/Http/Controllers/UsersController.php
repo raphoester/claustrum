@@ -15,6 +15,9 @@ class UsersController extends Controller
 
     public function profilU($id){
         $utilisateurRequis = User::findOrFail($id);
+
+        
+
         return view('profils/profil')->with("profil", $utilisateurRequis)->with("connecte", auth()->user());
     }
 }

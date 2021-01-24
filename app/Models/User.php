@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
     use HasFactory, Notifiable;
 
@@ -44,5 +44,13 @@ class User extends Authenticatable
     public function defisAccomplis()
     {
         return $this->belongsToMany(Defi::class);
+    }
+
+    public function messagesEnvoyes(){
+        return $this->hasMany(Message::class, 'envoyeur_id');
+    }
+
+    public function messagesRecus(){
+        return $this->hasMany(Message::class, 'receveur_id');
     }
 }

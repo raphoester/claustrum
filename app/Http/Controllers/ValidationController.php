@@ -13,8 +13,6 @@ class ValidationController extends Controller
         $defi = Models\Defi::select()->where('category', $catego)->where('id', $id)->first();
         $user = auth()->user();
 
-
-
         if ($defi->password == $_POST['mdp_defi'])
         {
             if($user->defisAccomplis->contains($id)){
