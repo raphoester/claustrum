@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models as Models;
 
 class ForumsController extends Controller
 {
@@ -11,15 +12,19 @@ class ForumsController extends Controller
         return view('forum/accueil');
     }
 
-    function publication()
+    function publication($publi)
     {
         return view('forum/publication');
+        $liste_publi = Models\Forum::select()->where('id', $publi)->get();
+        return view("forum/newpublication")->with('users', $liste_publi);
     }
     
     function newpublication()
     {
         return view('forum/newpublication');
     }
+
+  
     
 
     
