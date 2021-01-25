@@ -11,7 +11,7 @@
                 <div class="card-header">{{ __('Nouvelle publication') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="newpublication">
                         @csrf
 
                         <div class="form-group row">

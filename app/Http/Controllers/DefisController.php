@@ -15,7 +15,7 @@ class DefisController extends Controller
     public function focus_categorie($catego)
     {
         $liste_defis = Models\Defi::select()->where('category', $catego)->get();
-        return view("defis/focus_catego")->with('defis', $liste_defis);
+        return view("defis/focus_catego")->with('defis', $liste_defis) ;
     }
 
     public function focus_defi($catego, $id)

@@ -2,26 +2,42 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models as Models;
 
+
 class ForumsController extends Controller
 {
-    function index()
+    function publications()
     {
-        return view('forum/accueil');
-    }
-
-    function publication($publi)
-    {
-        return view('forum/publication');
-        $liste_publi = Models\Forum::select()->where('id', $publi)->get();
-        return view("forum/newpublication")->with('users', $liste_publi);
+        
+        $liste_publi = Models\Publication::all();
+        return view("forum/accueil")->with('publications', $liste_publi);
     }
     
+    function publication($id)
+    {
+        $publi = Models\Publication::select()->where('id', $id)->get();;
+
+        return view('forum/publication')->with('publications', $publi); 
+    
+    }
+
     function newpublication()
     {
-        return view('forum/newpublication');
+        return view('forum/newpublication');               
+    }
+    function insert(){
+        $newpubli = new Models\Publication;
+        $newpubli->titre = request('titre');
+        $newpubli->description = request('description');
+
+        $newpubli->auteur = auth()->user('name');
+
+        $newpubli->save();
+        flash('Publication publié')->success();
+        return view('forum/accueil');
     }
 
   
