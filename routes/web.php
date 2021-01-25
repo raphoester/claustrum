@@ -40,10 +40,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'publication']);
 
+    Route::post('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'com']);
+
     Route::get('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'newpublication']);
     
     
-    Route::post('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'newpublication']);
+    Route::post('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'insert']);
 
     
 

@@ -16,4 +16,12 @@ class Publication extends Model
         'created_at'
         
     ];
+    public function commentaires(){
+        return $this->hasMany(Commentaires::class);
+    }
+
+    public function auteur()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

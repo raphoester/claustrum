@@ -2,25 +2,25 @@
 
 @section('contenu')
 
-@foreach($publications as $publi)
+
 <div class="card mb-3">
 
 	<div class="card-body">
-		<p class="text-right"><small class="text-muted">{{$publi->created_at}}</small></p>
-		<h2 class="card-title">{{$publi->titre}}</h2>
+		<p class="text-right"><small class="text-muted">{{$publication->created_at}}</small></p>
+		<h2 class="card-title">{{$publication->titre}}</h2>
 		<br>
-		<p class="h3">{{$publi->description}}</p>
-		<p class="text-right"><small class="text-muted">{{$publi->auteur}}</small></p>
+		<p class="h3">{{$publication->description}}</p>
+		<p class="text-right"><small class="text-muted">{{$auteur->name}}</small></p>
 
 	</div>
 </div>
 
-@endforeach
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div class="container">
 	<div class="be-comment-block">
 		<h1 class="comments-title">Commentaire (3)</h1>
+		@foreach
 		<div class="card">
 			<div class="be-comment">
 				<div class="be-img-comment">
@@ -48,15 +48,19 @@
 
 
 		</div>
+		@endforeach
 
-		<form class="form-block">
+		<form class="form-block" method="POST" action="">
+			@csrf 
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="form-group">
-						<textarea class="form-input" required="" placeholder="Votre commentaire"></textarea>
+						<textarea id="description" name="contenu" class="form-input" required="" placeholder="Votre commentaire"></textarea>
 					</div>
 				</div>
-				<a class="btn btn-primary pull-right">Envoyer</a>
+				<button type="submit" class="btn btn-primary">
+                                    {{ __('Publier') }}
+                </button>
 			</div>
 		</form>
 	</div>

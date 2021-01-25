@@ -27,7 +27,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" name="description" class="form-control" name="description" value="{{ old('description') }}" required autocomplete="description" cols="30" rows="10"></textarea>
+                                <textarea id="description" name="description" class="form-control"  value="{{ old('description') }}" required autocomplete="description" cols="30" rows="10"></textarea>
 
                             </div>
                         </div>
