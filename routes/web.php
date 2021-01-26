@@ -36,9 +36,18 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class, 'focus_defi']);
 
-    Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'index'])->name("accueil_forum");
+    Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'publications'])->name("accueil_forum");
 
-    Route::get('/forum/{id}', [App\Http\Controllers\ForumsController::class, 'index']);
+    Route::get('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'publication']);
+
+    Route::post('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'com']);
+
+    Route::get('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'newpublication']);
+    
+    
+    Route::post('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'insert']);
+
+    
 
     Route::post('/defis/{catego}/{id}', [App\Http\Controllers\ValidationController::class, 'validation_defi']);
 

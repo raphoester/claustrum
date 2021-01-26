@@ -17,19 +17,11 @@
 <div class="card">    
     <div class="card-body">
         <h5 class="card-title">{{$publication->titre}}</h5>
-        <p class="card-text">Ceci est un article du forum</p>
-        <p class="card-text"><small class="text-muted">date publication</small></p>
-        <a href="/forum/publication" class="btn btn-primary">Voir la publication</a>
-    </div>
-</div>
-endforeach
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Titre</h5>
-        <p class="card-text">Ceci est un article du forum</p>
-        <p class="card-text"><small class="text-muted">date publication</small></p>
-        <a href="#" class="btn btn-primary">Voir la publication</a>
+        <p class="card-text">{{$publication->description}}</p>
+        <p class="card-text"><small class="text-muted">{{$publication->created_at}}</small></p>
+        <a href="/forum/publication/{{ $publication->id }}" class="btn btn-primary">Voir la publication</a>
     </div>
 </div>
 
+@endforeach
 @endsection
