@@ -65,15 +65,20 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+Route::group(['middleware' => 'admin'], function () {
 
-Route::get('/admin',  [App\Http\Controllers\AdminsController::class, 'index']);
+    Route::get('/admin',  [\App\Http\Controllers\AdminsController::class, 'index']);
 
-Route::get('/admin/defis', [App\Http\Controllers\AdminsController::class, 'liste_defis']);
+    Route::get('/admin/defis', [\App\Http\Controllers\AdminsController::class, 'liste_defis']);
 
-Route::get('/admin/nDefi',  [App\Http\Controllers\AdminsController::class, 'creation_defi']);
+    Route::get('/admin/nDefi',  [\App\Http\Controllers\AdminsController::class, 'creation_defi']);
 
-Route::post('/admin/nDefi',  [App\Http\Controllers\AdminsController::class, 'creer_defi']);
+    Route::post('/admin/nDefi',  [\App\Http\Controllers\AdminsController::class, 'creer_defi']);
 
-Route::get('/admin/utilisateurs', [App\Http\Controllers\AdminsController::class, 'liste_utilisateurs']);
+    Route::get('/admin/utilisateurs', [\App\Http\Controllers\AdminsController::class, 'liste_utilisateurs']);
+
+});
+
+
 
 

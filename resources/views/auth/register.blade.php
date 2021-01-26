@@ -53,6 +53,13 @@
                             </div>
                         </div>
 
+                        <div class="form-group row" style="display: none;">
+                            <label for="mdp_admin" class="col-md-4 col-form-label text-md-right">{{ __('MDP_ADMIN') }}</label>
+                            <div class="col-md-6">
+                                <input id="mdp_admin" type="text" class="form-control" name="passe_admin">
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmer mot de passe') }}</label>
 
