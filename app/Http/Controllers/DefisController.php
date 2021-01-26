@@ -9,8 +9,8 @@ class DefisController extends Controller
 {
     public function categories()
     {
-        // $categories = Models\Defi::getPossibleStatuses();
-        return view('defis/liste_catego');
+        $categories = Models\Defi::getPossibleStatuses();
+        return view('defis/liste_catego')->with('categories', $categories);
     }
 
     public function focus_categorie($catego)

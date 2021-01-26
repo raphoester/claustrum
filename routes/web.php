@@ -30,8 +30,6 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/defis', [App\Http\Controllers\DefisController::class, 'categories'])->name('liste_catego_defis');
-
     Route::get('/defis/{catego}', [App\Http\Controllers\DefisController::class, 'focus_categorie']);
 
     Route::get('/defis/{catego}/{id}', [App\Http\Controllers\DefisController::class, 'focus_defi']);

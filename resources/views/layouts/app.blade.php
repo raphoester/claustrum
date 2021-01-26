@@ -1,3 +1,6 @@
+@php
+{{ $catego_defi = \App\Models\Defi::getPossibleStatuses() ;}}
+@endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,7 +23,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/com.css') }}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 
@@ -31,7 +35,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Accueil') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -49,77 +55,20 @@
                             <a class="nav-link" href="{{url('/forum')}}">{{ __('Forum') }}</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('/defis')}}">{{ __('Défis') }}</a>
-                        </li>
-
-
-
-
-
-
-
-
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 Défis
                             </a>
 
-
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                
-
-
-                                <a class="dropdown-item" href='/defis/web_serveur'>
-                                    {{ __('Web Serveur') }}
+                                @foreach($catego_defi as $defi)
+                                <a class="dropdown-item" href='/defis/{{$defi->category}}'>
+                                    {{ $defi->category }}
                                 </a>
-
-                                <a class="dropdown-item" href='/defis/web_client'>
-                                    {{ __('Web Client') }}
-                                </a>
-
-                                <a class="dropdown-item" href='/defis/linux'>
-                                    {{ __('Linux') }}
-                                </a>
-
-
+                                @endforeach
                             </div>
                         </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <!-- Authentication Links -->
                         @guest
                         @if (Route::has('login'))
@@ -134,11 +83,10 @@
                         </li>
                         @endif
 
-
-
                         @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
@@ -146,9 +94,6 @@
                                 <a class="dropdown-item" href='/u/{{Auth::user()->id}}'>
                                     {{ __('Mon profil') }}
                                 </a>
-
-
-
 
                                 <a class="dropdown-item" href='/messages'>
                                     {{ __('Messagerie') }}

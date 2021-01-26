@@ -28,17 +28,9 @@ class Defi extends Model
     }
 
     public static function getPossibleStatuses(){
-        // $type = DB::select(DB::raw("SELECT * FROM sqlite_master WHERE type = 'table'"));
-        // dd($type);
         $type = DB::select(DB::raw(
-            "select
-            category
-          from
-            defi
-          group by
-            category
-            ;"
+            "select category from defis group by(category);"
         ));
+        return $type;
     }
-
 }
