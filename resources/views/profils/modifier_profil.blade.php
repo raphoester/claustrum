@@ -18,7 +18,9 @@
                                     </div>
                                     <div class="tab-content pt-3">
                                         <div class="tab-pane active">
-                                            <form class="form" novalidate="">
+                                            <form class="form" method="post" action="/profil/modification">
+                                                {{csrf_field()}}
+            
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="row">
@@ -33,7 +35,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Email</label>
-                                                                    <input class="form-control" type="text" placeholder="{{$user->email}}">
+                                                                    <input class="form-control" type="text" name="email" placeholder="{{$user->email}}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -42,19 +44,12 @@
                                                 <div class="row">
                                                     <div class="col-12 col-sm-6 mb-3">
                                                         <div class="mb-2"><b>Change Password</b></div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-group">
-                                                                    <label>Mot de passe actuel</label>
-                                                                    <input class="form-control" type="password" placeholder="••••••">
-                                                                </div>
-                                                            </div>
-                                                        </div>
+    
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Nouveau mot de passe</label>
-                                                                    <input class="form-control" type="password" placeholder="••••••">
+                                                                    <input class="form-control" type="password" name="mdpnv" placeholder="••••••">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -62,7 +57,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Confirmer <span class="d-none d-xl-inline">mot de passe</span></label>
-                                                                    <input class="form-control" type="password" placeholder="••••••">
+                                                                    <input class="form-control" type="password" name="mdpconfi" placeholder="••••••">
                                                                 </div>
                                                             </div>
                                                         </div>
