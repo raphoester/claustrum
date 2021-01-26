@@ -9,6 +9,7 @@ class DefisController extends Controller
 {
     public function categories()
     {
+        //$categories = Models\Defi::getPossibleStatuses();
         return view('defis/liste_catego');
     }
 

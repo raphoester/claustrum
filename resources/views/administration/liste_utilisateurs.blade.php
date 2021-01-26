@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('contenu')
 <div class="container">
+    <a href="/admin">&#60 &#60 &#60 Retour en arrière</a>
     <div>
         <h1>Liste des inscrits</h1>
     </div>
