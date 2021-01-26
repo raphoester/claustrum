@@ -2,19 +2,20 @@
 @section('contenu')
 
 <div class="container">
+    <a href="/admin">&#60 &#60 &#60 Retour en arrière</a>
     <div>
         <h1>Créer un nouveau défi</h1>
     </div>
     <div>
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             @csrf
             <div>
                 <h6>Titre</h6>
-                <input type="text" name="titre">
+                <input type="string" required name="titre">
             </div>
             <div>
                 <h6>Description</h6>
-                <input type="text" name="description" id="">
+                <input type="text" required name="description" id="">
             </div>
             <div>
                 <h6>Difficulté</h6>
@@ -28,7 +29,7 @@
             </div>
             <div>
                 <h6>Mot de passe</h6>
-                <input type="text" name="mdp">
+                <input type="text" required name="mdp">
             </div>
             <div>
                 <h6>Catégorie</h6>
@@ -39,10 +40,12 @@
                 </select>
             </div>
             <div>
-                <input type="submit">
+                <h6>fichier .zip contenant le défi</h6>
+                <input type="file" required accept=".zip" name='defi_zip'/>
             </div>
+            
             <div>
-                <strong>Note: Vous devez déjà avoir mis le défi dans le dossier approprié.</strong>
+                <input type="submit">
             </div>
         </form>
     </div>

@@ -16,7 +16,7 @@ class ForumsController extends Controller
     {
         return view('forum/publication');
         $liste_publi = Models\Forum::select()->where('id', $publi)->get();
-        return view("forum/newpublication")->with('users', $liste_publi);
+        return view("forum/newpublication")->with('publications', $liste_publi);
     }
     
     function newpublication()
@@ -24,8 +24,4 @@ class ForumsController extends Controller
         return view('forum/newpublication');
     }
 
-  
-    
-
-    
 }

@@ -28,13 +28,18 @@ class Defi extends Model
     }
 
     public static function getPossibleStatuses(){
-        $type = DB::select(DB::raw('show columns from defi_user where field = "category";' ))[0]->Type;
-        preg_match('/^enum\((.*)\)$/', $type, $matches);
-        $values = array();
-        foreach(explode(',', $matches[1]) as $value){
-            $values[] = trim($value, "'");
-        }
-        return $values;
+        $type = DB::select(DB::raw("SELECT * FROM sqlite_master WHERE type = 'table'"));
+        dd($type);
+
+
+        // VERSION SQL [recherche pour SQLITE en cours]
+        // $type = DB::select(DB::raw('show columns from defi_user where field = "category";' ))[0]->Type;
+        // preg_match('/^enum\((.*)\)$/', $type, $matches);
+        // $values = array();
+        // foreach(explode(',', $matches[1]) as $value){
+        //     $values[] = trim($value, "'");
+        // }
+        // return $values;
     }
 
 }
