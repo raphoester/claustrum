@@ -50,7 +50,9 @@ class ForumsController extends Controller
 
         $auteur = Models\Publication::find($commentaire->id);
 
-        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur);
+        
+
+        
         
         
         Models\Commentaires::insert([
@@ -65,6 +67,8 @@ class ForumsController extends Controller
 
 
         ]);
+
+        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur);
         
 
     }

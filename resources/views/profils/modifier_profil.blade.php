@@ -18,9 +18,9 @@
                                     </div>
                                     <div class="tab-content pt-3">
                                         <div class="tab-pane active">
-                                            <form class="form" method="POST" action="{{route('profil', ['user' => $user])}}">
-                                            @c
-                                            @method('PATCH')
+                                            <form class="form" method="post" action="/profil/modification">
+                                                {{csrf_field()}}
+            
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="row">
@@ -44,14 +44,7 @@
                                                 <div class="row">
                                                     <div class="col-12 col-sm-6 mb-3">
                                                         <div class="mb-2"><b>Change Password</b></div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-group">
-                                                                    <label>Mot de passe actuel</label>
-                                                                    <input class="form-control" type="password" name="mdpactu" placeholder="••••••">
-                                                                </div>
-                                                            </div>
-                                                        </div>
+    
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="form-group">

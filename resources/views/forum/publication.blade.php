@@ -10,13 +10,15 @@
 		<h2 class="card-title">{{$publication->titre}}</h2>
 		<br>
 		<p class="h3">{{$publication->description}}</p>
-		<p class="text-right"><small class="text-muted">{{$auteur->name}}</small></p>
+		<p class="text-right"><small class="text-muted"></small></p>
 
 	</div>
 </div>
 
 
+@foreach($com as $commentaire)
 
+@endforeach
 <div class="container">
 	<div class="be-comment-block">
 		<h1 class="comments-title">Commentaire (3)</h1>

@@ -42,18 +42,19 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'com']);
 
+
     Route::get('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'newpublication']);
-    
-    
     Route::post('/forum/newpublication', [App\Http\Controllers\ForumsController::class, 'insert']);
 
-    
 
     Route::post('/defis/{catego}/{id}', [App\Http\Controllers\ValidationController::class, 'validation_defi']);
 
-    Route::get('/profil/modification', [App\Http\Controllers\UsersController::class, 'afficherprofil']);
 
-    Route::patch('/profil/modification', [App\Http\Controllers\UsersController::class, 'updateprofil'])->name('profile.update');
+
+    Route::get('/profil/modification', [App\Http\Controllers\UsersController::class, 'page_modif_profil']);
+    Route::post('/profil/modification', [App\Http\Controllers\UsersController::class, 'updateprofil']);
+
+    
 
 
 
