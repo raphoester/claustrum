@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('contenu')
+@php
+{{ $catego_defi = \App\Models\Defi::getPossibleStatuses();}}
+@endphp
 
 <div class="container">
     <a href="/admin">&#60 &#60 &#60 Retour en arrière</a>
@@ -33,10 +36,11 @@
             </div>
             <div>
                 <h6>Catégorie</h6>
-                <select name="categorie" id="">
-                    <option value="web_client">web_client</option>
-                    <option value="web_serveur">web_serveur</option>
-                    <option value="linux">linux</option>
+                <select name="categorie" id="selecteur_categorie">
+                    @foreach($catego_defi as $defi)
+                        <option value="{{$defi->category}}">{{$defi->category}}</option>
+                    @endforeach
+                    <option value="nouvelle">Ajouter une nouvelle catégorie...</option>
                 </select>
             </div>
             <div>
@@ -50,6 +54,13 @@
         </form>
     </div>
 </div>
+A METTRE AILLEURS CAR LARAVEL EST UN CON
+<script>
+    var a = document.getElementById('selecteur_categorie');
+    a.addEventListener('change', function () {
+        alert(this.value);
+    }, false);
+</script>
 
 
 
