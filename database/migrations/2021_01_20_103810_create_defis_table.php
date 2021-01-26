@@ -15,11 +15,12 @@ class CreateDefisTable extends Migration
     {
         Schema::create('defis', function (Blueprint $table) {
             $table->id();
+            $table->boolean('estAdmin')->nullable()->default(false);
             $table->string('title');
             $table->text('description');
             $table->string('link');
             $table->string('password');
-            $table->enum("category", array("web_client", "web_serveur", "linux"));
+            $table->string("category");
             $table->enum("level", array(1, 2, 3, 4, 5));
             $table->timestamps();
         });

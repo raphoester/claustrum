@@ -9,7 +9,7 @@ class DefisController extends Controller
 {
     public function categories()
     {
-        //$categories = Models\Defi::getPossibleStatuses();
+        // $categories = Models\Defi::getPossibleStatuses();
         return view('defis/liste_catego');
     }
 
@@ -23,9 +23,5 @@ class DefisController extends Controller
     {
         $defi = Models\Defi::select()->where('category', $catego)->where('id', $id)->get();
         return view('defis/focus_defi')->with('defi', $defi[0]);
-    }
-
-    public function accesDefi(){
-        
     }
 }

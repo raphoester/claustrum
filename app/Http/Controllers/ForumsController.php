@@ -18,11 +18,10 @@ class ForumsController extends Controller
     
     function publication($id)
     {
-        $publi = Models\Publication::select()->where('id', $id)->get()[0];
+        $publi = Models\Publication::find($id);
         $auteur = Models\User::find($publi->auteur);
 
         return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur); 
-    
     }
 
     function newpublication()

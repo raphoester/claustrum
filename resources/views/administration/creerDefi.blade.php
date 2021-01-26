@@ -15,7 +15,7 @@
             </div>
             <div>
                 <h6>Description</h6>
-                <input type="text" required name="description" id="">
+                <textarea name="description" required  cols="30" rows="10"></textarea>
             </div>
             <div>
                 <h6>Difficulté</h6>
