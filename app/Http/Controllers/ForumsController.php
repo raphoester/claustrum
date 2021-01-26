@@ -45,6 +45,12 @@ class ForumsController extends Controller
 
     function com(Request $requete, $id){
         $requete->publi_id = $id ;
+
+        $commentaire = Models\Commentaires::select()->where('id', $id)->get()[0];
+
+        $auteur = Models\Publication::find($commentaire->id);
+
+        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur);
         
         
         Models\Commentaires::insert([
@@ -54,20 +60,11 @@ class ForumsController extends Controller
             "updated_at"=> \Carbon\Carbon::now(),
             "publi_id"=> $id
 
+            
+
 
 
         ]);
-        //$newcom = new Models\Commentaires;
-        //$newcom->description = request('description');
-
-        //$newcom->publi_id = "" ;
-
-        //$newcom->auteur = auth()->user('name');
-
-        //$newcom->save();
-        
-
-        //Models\Commentaires::
         
 
     }

@@ -18,7 +18,9 @@
                                     </div>
                                     <div class="tab-content pt-3">
                                         <div class="tab-pane active">
-                                            <form class="form" novalidate="">
+                                            <form class="form" method="POST" action="{{route('profil', ['user' => $user])}}">
+                                            @c
+                                            @method('PATCH')
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="row">
@@ -33,7 +35,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Email</label>
-                                                                    <input class="form-control" type="text" placeholder="{{$user->email}}">
+                                                                    <input class="form-control" type="text" name="email" placeholder="{{$user->email}}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -46,7 +48,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Mot de passe actuel</label>
-                                                                    <input class="form-control" type="password" placeholder="••••••">
+                                                                    <input class="form-control" type="password" name="mdpactu" placeholder="••••••">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -54,7 +56,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Nouveau mot de passe</label>
-                                                                    <input class="form-control" type="password" placeholder="••••••">
+                                                                    <input class="form-control" type="password" name="mdpnv" placeholder="••••••">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -62,7 +64,7 @@
                                                             <div class="col">
                                                                 <div class="form-group">
                                                                     <label>Confirmer <span class="d-none d-xl-inline">mot de passe</span></label>
-                                                                    <input class="form-control" type="password" placeholder="••••••">
+                                                                    <input class="form-control" type="password" name="mdpconfi" placeholder="••••••">
                                                                 </div>
                                                             </div>
                                                         </div>

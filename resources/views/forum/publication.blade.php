@@ -20,7 +20,7 @@
 <div class="container">
 	<div class="be-comment-block">
 		<h1 class="comments-title">Commentaire (3)</h1>
-		@foreach
+		
 		<div class="card">
 			<div class="be-comment">
 				<div class="be-img-comment">
@@ -48,7 +48,7 @@
 
 
 		</div>
-		@endforeach
+		
 
 		<form class="form-block" method="POST" action="">
 			@csrf 

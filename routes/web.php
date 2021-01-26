@@ -51,7 +51,11 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/defis/{catego}/{id}', [App\Http\Controllers\ValidationController::class, 'validation_defi']);
 
-    Route::get('/profil/modification', [App\Http\Controllers\UsersController::class, 'modifierProfil']);
+    Route::get('/profil/modification', [App\Http\Controllers\UsersController::class, 'afficherprofil']);
+
+    Route::patch('/profil/modification', [App\Http\Controllers\UsersController::class, 'updateprofil'])->name('profile.update');
+
+
 
     Route::get('/u/{id}', [App\Http\Controllers\UsersController::class, 'profilU']);
 
