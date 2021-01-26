@@ -16,9 +16,7 @@
 </div>
 
 
-@foreach($com as $commentaire)
 
-@endforeach
 <div class="container">
 	<div class="be-comment-block">
 		<h1 class="comments-title">Commentaire (3)</h1>

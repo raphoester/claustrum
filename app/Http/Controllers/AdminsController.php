@@ -33,7 +33,7 @@ class AdminsController extends Controller
         $dossier_zip =  env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie;
         $chemin_zip = env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie."\defi_".$id.".zip";
                 
-        exec ("cd ".$dossier_zip." && mkdir defi_".$id." && tar -xf ".$chemin_zip." -C defi_".$id."&& cd .. && del defi_*.zip");
+        exec ("cd ".$dossier_zip." && mkdir defi_".$id." && tar -xf ".$chemin_zip." -C defi_".$id." && cd ".$dossier_zip." && del defi_*.zip");
 
         \App\Models\Defi::insert
         ([

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('contenu')
 
-<div>
+<div class="container">
     <h1>Défis par catégorie</h1>
     <div>
         <div>
@@ -20,8 +20,6 @@
                     <a href="/defis/linux">Linux</a>
                 </h3>
             </div>
-            
-
         </div>
 
     </div>
