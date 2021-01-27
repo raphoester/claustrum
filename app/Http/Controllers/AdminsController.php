@@ -25,16 +25,24 @@ class AdminsController extends Controller
             $id = \App\Models\Defi::find(\DB::table('defis')->max('id'))->id+1;
         }
 
-        $requete->url = "http://".env('URL_DEFI', "localhost/defis_claustrum/").$requete->categorie."/defi_".$id;
-        
+        if($requete->nvCategorie && $requete )
+        {
+            $requete->categorie = $requete->nvCategorie;
+        }
 
+
+
+
+        //création de l'url
+        $requete->url = "http://".env('URL_DEFI', "localhost/defis_claustrum/").$requete->categorie."/defi_".$id;
+        //déplacement du zip au bon endroit
         $requete->file('defi_zip')->move(env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie, "defi_".$id.".zip");
-        
+        //fabrication des addresses définitives
         $dossier_zip =  env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie;
         $chemin_zip = env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie."\defi_".$id.".zip";
-                
+        //exécution d'une commande windows pour dézipper le fichier et le mettre au bon endroit.
         exec ("cd ".$dossier_zip." && mkdir defi_".$id." && tar -xf ".$chemin_zip." -C defi_".$id." && cd ".$dossier_zip." && del defi_*.zip");
-
+        //insertion dans la BDD
         \App\Models\Defi::insert
         ([
             'title' => $requete->titre, 
@@ -47,6 +55,7 @@ class AdminsController extends Controller
             'created_at' =>  \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
+
         return $this->index();
     }
 

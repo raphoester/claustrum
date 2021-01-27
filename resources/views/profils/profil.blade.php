@@ -49,21 +49,22 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <h6 class="d-flex align-items-center mb-3">Défis accomplis : {{ count($profil->defisAccomplis) }}</h6>
-                                <small>Web_client</small>
-                                <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"
-                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <small>Web_serveur</small>
-                                <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 72%"
-                                        aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <small>Linux</small>
-                                <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 89%"
-                                        aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                @foreach($categos as $categorie)
+                                    @php
+                                    {{ 
+                                        $accomplis = $profil->avancementCategorie($categorie->category);
+                                        $total = \App\Models\Defi::compteParCatego($categorie->category);
+                                        $pourcentage = ($accomplis/$total)*100;
+                                        
+                                        
+                                    }}
+                                    @endphp
+                                    <small>{{$categorie->category}}</small>
+                                    <div class="progress mb-3" style="height: 5px">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $pourcentage }}%" ></div>
+                                    </div>
+                                @endforeach
+                                
                             </div>
                         </div>
                     </div>

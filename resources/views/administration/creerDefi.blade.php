@@ -4,10 +4,10 @@
 {{ $catego_defi = \App\Models\Defi::getPossibleStatuses();}}
 @endphp
 
-<div class="container">
+<div class="container" >
     <a href="/admin">&#60 &#60 &#60 Retour en arrière</a>
     <div>
-        <h1>Créer un nouveau défi</h1>
+        <h1 id="titre">Créer un nouveau défi</h1>
     </div>
     <div>
         <form action="" method="POST" enctype="multipart/form-data">
@@ -40,8 +40,13 @@
                     @foreach($catego_defi as $defi)
                         <option value="{{$defi->category}}">{{$defi->category}}</option>
                     @endforeach
-                    <option value="nouvelle">Ajouter une nouvelle catégorie...</option>
+                    <option id='nv' value="nouvelle">Ajouter une nouvelle catégorie...</option>
                 </select>
+
+                <div id='insertion' style="display: none;">
+                    <h6>Nom de la nouvelle catégorie</h6>
+                    <input type="string" name='nvCategorie'> 
+                </div>
             </div>
             <div>
                 <h6>fichier .zip contenant le défi</h6>
@@ -54,13 +59,20 @@
         </form>
     </div>
 </div>
-A METTRE AILLEURS CAR LARAVEL EST UN CON
-<script>
-    var a = document.getElementById('selecteur_categorie');
-    a.addEventListener('change', function () {
-        alert(this.value);
-    }, false);
+
+<script type="application/javascript">
+
+    $(function() {   
+        $('#selecteur_categorie').change(function(){
+            $('#insertion').hide();
+            if($( "#selecteur_categorie" ).val() == 'nouvelle'){
+                $('#insertion').show();
+            }
+        });
+    });
+
 </script>
+
 
 
 
