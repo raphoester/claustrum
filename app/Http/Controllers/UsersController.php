@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User as User;
 use App\Models as Models;
+use Illuminate\Contracts\Mail\Mailer;
 
 class UsersController extends Controller
 {
@@ -15,7 +16,7 @@ class UsersController extends Controller
         return view('profils/modifier_profil', ['user' => $user]);
     }
 
-    public function updateprofil()
+    public function updateprofil(Mailer $email)
     {
         $user = User::find(auth()->user()->id);
 
@@ -33,6 +34,15 @@ class UsersController extends Controller
 
     
         $user->save();
+
+
+        $email->send('emails.modifprofil', ['username' => $user->name], function($message) use($user){
+
+            
+
+            $message->to($user->email)->from('claustrum@mail.com')->subject('Changement des informations confidentielles');
+
+        });
 
         return view('profils/profil', ['profil' => $user])->with("connecte", auth()->user());
     }

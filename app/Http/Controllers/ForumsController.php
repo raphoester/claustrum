@@ -61,11 +61,15 @@ class ForumsController extends Controller
             "updated_at"=> \Carbon\Carbon::now(),
             "publi_id"=> $id
 
-            
-
-
-
         ]);
+
+        
+
+        
+
+        
+        
+        
 
         return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur);
         

@@ -31,7 +31,7 @@
 				<div class="be-comment-content">
 
 					<span class="be-comment-name">
-						Nom
+					
 					</span>
 					<span class="be-comment-time">
 						<i class="fa fa-clock-o"></i>
