@@ -59,10 +59,9 @@
                                         
                                     }}
                                     @endphp
-                                    <small>Web_client</small>
+                                    <small>{{$categorie->category}}</small>
                                     <div class="progress mb-3" style="height: 5px">
-                                        <!-- insérer ici la progression réelle -->
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 10%"></div>
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $pourcentage }}%" ></div>
                                     </div>
                                 @endforeach
                                 
