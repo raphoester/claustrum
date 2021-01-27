@@ -33,4 +33,9 @@ class Defi extends Model
         ));
         return $type;
     }
+
+    public static function compteParCatego($categorie){
+        $total = \App\Models\Defi::where('category', $categorie)->count();
+        return $total ;
+    }
 }

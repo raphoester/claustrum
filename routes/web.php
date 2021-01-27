@@ -53,9 +53,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/profil/modification', [App\Http\Controllers\UsersController::class, 'updateprofil']);
 
     
-
-
-
     Route::get('/u/{id}', [App\Http\Controllers\UsersController::class, 'profilU']);
 
     Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'liste_convs']);

@@ -47,6 +47,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Defi::class);
     }
 
+    public function avancementCategorie($categorie){
+        return $this->belongsToMany(Defi::class)->where('category', '=', $categorie)->count();
+    }
+
     public function messagesEnvoyes(){
         return $this->hasMany(Message::class, 'envoyeur_id');
     }

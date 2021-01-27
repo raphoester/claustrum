@@ -37,24 +37,12 @@ class UsersController extends Controller
         return view('profils/profil', ['profil' => $user])->with("connecte", auth()->user());
     }
 
-
-
     public function profilU($id)
     {
         $utilisateurRequis = User::findOrFail($id);
+        $categories = \App\Models\Defi::getPossibleStatuses();
 
-
-
-        return view('profils/profil')->with("profil", $utilisateurRequis)->with("connecte", auth()->user());
+        return view('profils/profil')->with("profil", $utilisateurRequis)->with("connecte", auth()->user())->with('categos', $categories);
     }
-
-
-
-
-
-
-
-
-
 
 }
