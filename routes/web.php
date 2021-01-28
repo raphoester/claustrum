@@ -77,6 +77,8 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/admin/utilisateurs', [\App\Http\Controllers\AdminsController::class, 'liste_utilisateurs']);
 
+    Route::get('/admin/sujetsForum', [\App\Http\Controllers\AdminsController::class, 'sujets_forum']);
+
 });
 
 

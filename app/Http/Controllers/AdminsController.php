@@ -69,4 +69,9 @@ class AdminsController extends Controller
         $defis = \App\Models\Defi::all();
         return view("administration/liste_defis")->with('defis', $defis);
     }
+
+    public function sujets_forum(){
+        $sujets = \App\Models\Publication::all();
+        return view('administration/liste_sujets')->with('sujets', $sujets);
+    }
 }

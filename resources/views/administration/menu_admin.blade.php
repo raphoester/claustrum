@@ -36,10 +36,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="#">Sujets du forum</a>
-                    </li>
-                    <li>
-                        <a href="#">lien xxx</a>
+                        <a href="/admin/sujetsForum">Sujets du forum</a>
                     </li>
                 </ul>
             </li>
