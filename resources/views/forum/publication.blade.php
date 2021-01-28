@@ -2,24 +2,30 @@
 
 @section('contenu')
 
-
-<div class="card mb-3">
+<div class="container">
+<div class="card mb-3 container">
 
 	<div class="card-body">
 		<p class="text-right"><small class="text-muted">{{$publication->created_at}}</small></p>
 		<h2 class="card-title">{{$publication->titre}}</h2>
 		<br>
-		<p class="h3">{{$publication->description}}</p>
+		<p>{{$publication->description}}</p>
 		<p class="text-right"><small class="text-muted"></small></p>
 
 	</div>
 </div>
 
+@php
+    $i=0;
+            foreach($com as $commentaire){
+                    $i+=1;
+            }
+@endphp
 
 
 <div class="container">
 	<div class="be-comment-block">
-		<h1 class="comments-title">Commentaire (3)</h1>
+		<h1 class="comments-title">Commentaire ({{$i}})</h1>
 
 		@foreach($com as $commentaire)
 		
@@ -27,14 +33,21 @@
 			<div class="be-comment">
 				<div class="be-img-comment">
 					<a href="blog-detail-2.html">
-						<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
+						<img src="https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg" alt="" class="be-ava-comment">
 					</a>
 				</div>
 				<div class="be-comment-content">
 
 					<span class="be-comment-name">
 
+					@if($connecte->id == $profil->id)
 						{{$com->auteur}}
+					@else
+
+						<a href="/messages/{{$profil->id}}">{{$com->auteur}}</button>
+					@endif
+
+						
 						
 					
 					</span>
@@ -65,12 +78,12 @@
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary">
-                                    {{ __('Publier') }}
+                    {{ __('Publier') }}
                 </button>
 			</div>
 		</form>
 	</div>
 </div>
-
+</div>
 
 @endsection

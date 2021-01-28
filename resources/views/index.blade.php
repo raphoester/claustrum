@@ -6,19 +6,26 @@
 <section class="hero">
 
     <div class="hero-content">
-    
-       <h1 class="hero-title">
+
+        <h1 class="hero-title">
             Claustrum
-       </h1>
-         
-       <h2 class="hero-subtitle">
+        </h1>
+
+        <h2 class="hero-subtitle">
             Le meilleur endroit pour apprendre la cybersécurité !
-       </h2>
-         
-       <button type="button" class="hero-button" onclick="location.href='/register'">
-            S'inscrire &raquo;
-       </button>
-    
+        </h2>
+        <div>
+            <button type="button" class="hero-button" onclick="location.href='/register'">
+                S'inscrire &raquo;
+            </button>
+        </div>
+        <div>
+            <button type="button" class='hero-button' onclick="location.href='/login'" style="font-size: 1.4rem;">
+                Se connecter
+            </button>
+        </div>
+
+
     </div>
 
 </section>
