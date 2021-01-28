@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="{{$profil->image}}" class="rounded-circle" width="150">
+                            <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg" class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <h4>{{$profil->name}}</h4>
                                 <p class="text-secondary mb-1">Réputation : {{$profil->rep}}</p>
