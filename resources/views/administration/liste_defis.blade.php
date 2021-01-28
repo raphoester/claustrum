@@ -34,7 +34,7 @@
                     <td>{{$defi->created_at}}</td>
                     <td><a href="{{$defi->link}}">{{$defi->link}}</a></td>
                     <td>{{$defi->password}}</td>
-                    <td><button>❌</button></td>
+                    <td><a href="/admin/suppr_defi/{{$defi->id}}">❌</a></td>
                 </tr>
                 @endforeach
             </tbody>

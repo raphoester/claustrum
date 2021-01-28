@@ -40,10 +40,10 @@
                     @foreach($catego_defi as $defi)
                         <option value="{{$defi->category}}">{{$defi->category}}</option>
                     @endforeach
-                    <option id='nv' value="nouvelle">Ajouter une nouvelle catégorie...</option>
+                    <option selected="selected" id='nv' value="nouvelle">Ajouter une nouvelle catégorie...</option>
                 </select>
 
-                <div id='insertion' style="display: none;">
+                <div id='insertion'>
                     <h6>Nom de la nouvelle catégorie</h6>
                     <input type="string" name='nvCategorie'> 
                 </div>

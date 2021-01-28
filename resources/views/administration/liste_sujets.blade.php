@@ -25,7 +25,7 @@
                     <td>{{$sujet->created_at}}</td>
                     <td>{{$sujet->auteur}}</td>
                     
-                    <td><button>❌</button></td>
+                    <td><a href="/admin/suppr_publi/{{$sujet->id}}">❌</a></td>
                 </tr>
                 @endforeach
             </tbody>

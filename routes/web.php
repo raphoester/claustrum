@@ -79,6 +79,12 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/admin/sujetsForum', [\App\Http\Controllers\AdminsController::class, 'sujets_forum']);
 
+    Route::get('/admin/suppr_util/{id}', [\App\Http\Controllers\AdminsController::class, 'supprimer_utilisateur']);
+
+    Route::get('/admin/suppr_publi/{id}', [\App\Http\Controllers\AdminsController::class, 'supprimer_publication']);
+
+    Route::get('/admin/suppr_defi/{id}', [\App\Http\Controllers\AdminsController::class, 'supprimer_defi']);
+
 });
 
 

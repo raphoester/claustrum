@@ -55,4 +55,6 @@ class UsersController extends Controller
         return view('profils/profil')->with("profil", $utilisateurRequis)->with("connecte", auth()->user())->with('categos', $categories);
     }
 
+    
+
 }

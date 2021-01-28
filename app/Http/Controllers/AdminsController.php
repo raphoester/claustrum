@@ -30,9 +30,6 @@ class AdminsController extends Controller
             $requete->categorie = $requete->nvCategorie;
         }
 
-
-
-
         //création de l'url
         $requete->url = "http://".env('URL_DEFI', "localhost/defis_claustrum/").$requete->categorie."/defi_".$id;
         //déplacement du zip au bon endroit
@@ -73,5 +70,23 @@ class AdminsController extends Controller
     public function sujets_forum(){
         $sujets = \App\Models\Publication::all();
         return view('administration/liste_sujets')->with('sujets', $sujets);
+    }
+
+    public function supprimer_utilisateur($id){
+        $del = \App\Models\User::findOrFail($id);
+        $del->delete();
+        return back();
+    }
+
+    public function supprimer_publication($id){
+        $del = \App\Models\Publication::findOrFail($id);
+        $del->delete();
+        return back();
+    }
+
+    public function supprimer_defi($id){
+        $del = \App\Models\Defi::findOrFail($id);
+        $del->delete();
+        return back();
     }
 }

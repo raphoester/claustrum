@@ -2,14 +2,14 @@
 
 @section('contenu')
 
-
-<div class="card mb-3">
+<div class="container">
+<div class="card mb-3 container">
 
 	<div class="card-body">
 		<p class="text-right"><small class="text-muted">{{$publication->created_at}}</small></p>
 		<h2 class="card-title">{{$publication->titre}}</h2>
 		<br>
-		<p class="h3">{{$publication->description}}</p>
+		<p>{{$publication->description}}</p>
 		<p class="text-right"><small class="text-muted"></small></p>
 
 	</div>
@@ -78,12 +78,12 @@
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary">
-                                    {{ __('Publier') }}
+                    {{ __('Publier') }}
                 </button>
 			</div>
 		</form>
 	</div>
 </div>
-
+</div>
 
 @endsection

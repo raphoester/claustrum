@@ -49,21 +49,19 @@ class ForumsController extends Controller
         
     }
 
-    function com(Request $requete, $id){
-        $requete->publi_id = $id ;
+    function com(Request $requete, $id)
+    {
+        $requete->publi_id = $id;
 
-        $commentaire = Models\Commentaires::select()->where('id', $id)->get()[0];
+        
+        $commentaire = Models\Commentaires::select()->where('id', $id)->get();
 
+        // dd($commentaire);
         $auteur = Models\Publication::find($commentaire->id);
 
 
         $publi = Models\Publication::find($id);
-
-        
-
-        
-        
-        
+ 
         Models\Commentaires::insert([
             "description"=> $requete->contenu,
             "auteur"=> auth()->user()->id,
@@ -72,14 +70,6 @@ class ForumsController extends Controller
             "publi_id"=> $id
 
         ]);
-
-        
-
-        
-
-        
-        
-        
 
         return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur)->with('publication', $publi);
         
