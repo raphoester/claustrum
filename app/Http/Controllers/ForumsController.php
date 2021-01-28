@@ -23,12 +23,13 @@ class ForumsController extends Controller
     function publication($id)
     {
         $publi = Models\Publication::find($id);
+        
         $auteur = Models\User::find($publi->auteur);
-
-        $commentaire = Models\Commentaires::select()->where('id', $id)->get()[0];
-        $utilisateurRequis = User::findOrFail($id);
-
-        return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur)->with('com', $commentaire)->with("profil", $utilisateurRequis)->with("connecte", auth()->user()); 
+        
+        $commentaires = $publi->commentaires;
+        
+        
+        return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur)->with('com', $commentaires)->with("connecte", auth()->user()); 
     }
 
     function newpublication()
@@ -51,27 +52,32 @@ class ForumsController extends Controller
 
     function com(Request $requete, $id)
     {
-        $requete->publi_id = $id;
+
+        $publication = \App\Models\Publication::findOrFail($id);
+
+
+        $publication->commentaires()->create([
+                "auteur"=> auth()->user()->id,
+                "description"=> $requete->contenu,
+                "created_at"=> \Carbon\Carbon::now(),
+                "updated_at"=> \Carbon\Carbon::now(),
+                
+            ]
+        );
+
+        return redirect()->route('pub', ['id'=> $id]);
+
+
 
         
-        $commentaire = Models\Commentaires::select()->where('id', $id)->get();
 
-        // dd($commentaire);
-        $auteur = Models\Publication::find($commentaire->id);
+        
 
+        
+        
+        
 
-        $publi = Models\Publication::find($id);
- 
-        Models\Commentaires::insert([
-            "description"=> $requete->contenu,
-            "auteur"=> auth()->user()->id,
-            "created_at"=> \Carbon\Carbon::now(),
-            "updated_at"=> \Carbon\Carbon::now(),
-            "publi_id"=> $id
-
-        ]);
-
-        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur)->with('publication', $publi);
+        // return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur)->with('publication', $publi);
         
 
     }

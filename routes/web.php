@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/forum', [App\Http\Controllers\ForumsController::class, 'publications'])->name("accueil_forum");
 
-    Route::get('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'publication']);
+    Route::get('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'publication'])->name('pub');
 
     Route::post('/forum/publication/{id}', [App\Http\Controllers\ForumsController::class, 'com']);
 

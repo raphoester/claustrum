@@ -58,4 +58,8 @@ class User extends Authenticatable
     public function messagesRecus(){
         return $this->hasMany(Message::class, 'receveur_id');
     }
+
+    public function commentaires(){
+        return $this->hasMany(Commentaires::class, 'auteur');
+    }
 }
