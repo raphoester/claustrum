@@ -20,6 +20,8 @@
 <div class="container">
 	<div class="be-comment-block">
 		<h1 class="comments-title">Commentaire (3)</h1>
+
+		@foreach($com as $commentaire)
 		
 		<div class="card">
 			<div class="be-comment">
@@ -31,18 +33,22 @@
 				<div class="be-comment-content">
 
 					<span class="be-comment-name">
+
+						{{$com->auteur}}
+						
 					
 					</span>
 					<span class="be-comment-time">
 						<i class="fa fa-clock-o"></i>
-						Date
+						{{$com->created_at}}
 					</span>
 
 					<p class="be-comment-text">
-						Commentaire
+					{{$com->description}}
 					</p>
 				</div>
 			</div>
+			@endforeach
 
 
 

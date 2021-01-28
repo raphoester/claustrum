@@ -16,12 +16,16 @@ class ForumsController extends Controller
         return view("forum/accueil")->with('publications', $liste_publi);
     }
     
+
+
     function publication($id)
     {
         $publi = Models\Publication::find($id);
         $auteur = Models\User::find($publi->auteur);
 
-        return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur); 
+        $commentaire = Models\Commentaires::select()->where('id', $id)->get()[0];
+
+        return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur)->with('com', $commentaire); 
     }
 
     function newpublication()
@@ -49,6 +53,9 @@ class ForumsController extends Controller
 
         $auteur = Models\Publication::find($commentaire->id);
 
+
+        $publi = Models\Publication::find($id);
+
         
 
         
@@ -71,7 +78,7 @@ class ForumsController extends Controller
         
         
 
-        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur);
+        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur)->with('publication', $publi);
         
 
     }
