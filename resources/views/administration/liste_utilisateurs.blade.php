@@ -23,7 +23,7 @@
                     <td>{{$utilisateur->name}}</td>
                     <td>{{$utilisateur->email}}</td>
                     <td>{{$utilisateur->created_at}}</td>
-                    <td><button>❌</button></td>
+                    <td><a href="/admin/suppr_util/{{$utilisateur->id}}">❌</a></td>
                 </tr>
                 @endforeach
             </tbody>

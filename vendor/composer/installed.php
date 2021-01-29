@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a9955a3d63866c93e6997c36fe658ac2273f7b0f',
+    'reference' => 'e17a047ff8305446371736ee1aa72a2254540d48',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -20,6 +20,15 @@
       ),
       'reference' => '8d8f88b3b3830916be94292c1fbce84433efb1aa',
     ),
+    'backpack/crud' => 
+    array (
+      'pretty_version' => '4.1.30',
+      'version' => '4.1.30.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '62856b1f01fc3e05c80140fc22f85ea2aac8368c',
+    ),
     'brick/math' => 
     array (
       'pretty_version' => '0.9.1',
@@ -29,12 +38,30 @@
       ),
       'reference' => '283a40c901101e66de7061bd359252c013dcc43c',
     ),
+    'composer/package-versions-deprecated' => 
+    array (
+      'pretty_version' => '1.11.99.1',
+      'version' => '1.11.99.1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7413f0b55a051e89485c5cb9f765fe24bb02a7b6',
+    ),
     'cordoval/hamcrest-php' => 
     array (
       'replaced' => 
       array (
         0 => '*',
       ),
+    ),
+    'creativeorange/gravatar' => 
+    array (
+      'pretty_version' => 'v1.0.20',
+      'version' => '1.0.20.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8c2c1a3a59fdf05f50c9d9413dd9d2d50835e017',
     ),
     'davedevelopment/hamcrest-php' => 
     array (
@@ -51,6 +78,33 @@
       array (
       ),
       'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
+    ),
+    'doctrine/cache' => 
+    array (
+      'pretty_version' => '1.10.2',
+      'version' => '1.10.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '13e3381b25847283a91948d04640543941309727',
+    ),
+    'doctrine/dbal' => 
+    array (
+      'pretty_version' => '2.12.1',
+      'version' => '2.12.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'adce7a954a1c2f14f85e94aed90c8489af204086',
+    ),
+    'doctrine/event-manager' => 
+    array (
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
     ),
     'doctrine/inflector' => 
     array (
@@ -454,7 +508,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a9955a3d63866c93e6997c36fe658ac2273f7b0f',
+      'reference' => 'e17a047ff8305446371736ee1aa72a2254540d48',
     ),
     'laravel/sail' => 
     array (
@@ -574,6 +628,13 @@
       array (
       ),
       'reference' => 'aca954fd03414ba0dd85d7d8e42ba9b251893d1f',
+    ),
+    'ocramius/package-versions' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '1.11.99',
+      ),
     ),
     'opis/closure' => 
     array (
@@ -700,6 +761,15 @@
       array (
       ),
       'reference' => 'e7bdf4085de85a825f4424eae52c99a1cec2f360',
+    ),
+    'prologue/alerts' => 
+    array (
+      'pretty_version' => '0.4.8',
+      'version' => '0.4.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a6412e318c0171526bc8b25ef597f2cc61f5b800',
     ),
     'psr/container' => 
     array (

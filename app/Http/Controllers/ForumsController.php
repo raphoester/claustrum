@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models as Models;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User as User;
 
 class ForumsController extends Controller
 {
@@ -13,15 +14,21 @@ class ForumsController extends Controller
     {
         
         $liste_publi = Models\Publication::all();
+        
         return view("forum/accueil")->with('publications', $liste_publi);
     }
     
+
+
     function publication($id)
     {
         $publi = Models\Publication::find($id);
         $auteur = Models\User::find($publi->auteur);
 
-        return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur); 
+        $commentaire = Models\Commentaires::select()->where('id', $id)->get()[0];
+        $utilisateurRequis = User::findOrFail($id);
+
+        return view('forum/publication')->with('publication', $publi)->with('auteur',$auteur)->with('com', $commentaire)->with("profil", $utilisateurRequis)->with("connecte", auth()->user()); 
     }
 
     function newpublication()
@@ -42,14 +49,18 @@ class ForumsController extends Controller
         
     }
 
-    function com(Request $requete, $id){
-        $requete->publi_id = $id ;
-
-        $commentaire = Models\Commentaires::select()->where('id', $id)->get()[0];
-
-        $auteur = Models\Publication::find($commentaire->id);
+    function com(Request $requete, $id)
+    {
+        $requete->publi_id = $id;
 
         
+        $commentaire = Models\Commentaires::select()->where('id', $id)->get();
+
+        dd($commentaire);
+        $auteur = Models\Publication::find($commentaire->id);
+
+
+        $publi = Models\Publication::find($id);
 
         
         
@@ -71,7 +82,7 @@ class ForumsController extends Controller
         
         
 
-        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur);
+        return view('forum/publication')->with('com', $commentaire)->with('auteur',$auteur)->with('publication', $publi);
         
 
     }
