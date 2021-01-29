@@ -14,8 +14,8 @@ class Commentaires extends Model
         'auteur'
         
     ];
-public function publicationOriginale(){
-    return $this->belongsTo(Publication::class);
+    public function publicationOriginale(){
+        return $this->belongsTo(Publication::class);
 
-}
+    }
 }

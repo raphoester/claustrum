@@ -17,7 +17,7 @@ class Publication extends Model
         
     ];
     public function commentaires(){
-        return $this->hasMany(Commentaires::class);
+        return $this->hasMany(Commentaires::class, "publi_id");
     }
 
     public function auteur()
