@@ -54,7 +54,7 @@
                 déjà
                 pour aider les autres apprentis. Une règle très importante existe toutefois :
             </p>
-            <p><strong>Ne JAMAIS donner la solution entière.</strong></p>
+            <p><strong>Ne JAMAIS donner une solution entière.</strong></p>
             <p>L'équipe de modération se réserve le droit de supprimer toute publication, commentaire ou compte qui
                 violerait cette règle.
             </p>
