@@ -34,11 +34,12 @@ class AdminsController extends Controller
         //création de l'url
         $requete->url = env('URL_DEFI', "localhost/defis_claustrum/").$requete->categorie."/defi_".$id;
         // //déplacement du zip au bon endroit
-        // $requete->file('defi_zip')->move(env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie, "defi_".$id.".zip");
+        $requete->file('defi_zip')->move(env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie, "defi_".$id.".zip");
         // //fabrication des addresses définitives
-        // $dossier_zip =  env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie;
-        // $chemin_zip = env('STOCKAGE_DEFI', 'C:\xampp\htdocs\defis_claustrum\\').$requete->categorie."\defi_".$id.".zip";
+        $dossier_zip =  env('STOCKAGE_DEFI', '').$requete->categorie;
+        $chemin_zip = env('STOCKAGE_DEFI', '').$requete->categorie."/defi_".$id.".zip";
         // //exécution d'une commande windows pour dézipper le fichier et le mettre au bon endroit.
+        dd($chemin_zip);
         // exec ("cd ".$dossier_zip." && mkdir defi_".$id." && tar -xf ".$chemin_zip." -C defi_".$id." && cd ".$dossier_zip." && del defi_*.zip");
         // //insertion dans la BDD
         // //salutsalutsalutsalut
