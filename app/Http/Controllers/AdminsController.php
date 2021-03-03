@@ -46,12 +46,7 @@ class AdminsController extends Controller
         $zip->extractTo(env('STOCKAGE_DEFI', "").$requete->categorie."/defi_".$id);
 
 
-        // $dossier_zip =  env('STOCKAGE_DEFI', '').$requete->categorie;
-        // $chemin_zip = env('STOCKAGE_DEFI', '').$requete->categorie."/defi_".$id.".zip";
-        // //exécution d'une commande windows pour dézipper le fichier et le mettre au bon endroit.
-        // exec ("cd ".$dossier_zip." && mkdir defi_".$id." && tar -xf ".$chemin_zip." -C defi_".$id." && cd ".$dossier_zip." && del defi_*.zip");
-        // //insertion dans la BDD
-        // //salutsalutsalutsalut
+
         \App\Models\Defi::insert
         ([
             'title' => $requete->titre, 
