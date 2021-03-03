@@ -40,6 +40,7 @@ class AdminsController extends Controller
         //exécution d'une commande windows pour dézipper le fichier et le mettre au bon endroit.
         exec ("cd ".$dossier_zip." && mkdir defi_".$id." && tar -xf ".$chemin_zip." -C defi_".$id." && cd ".$dossier_zip." && del defi_*.zip");
         //insertion dans la BDD
+        //salut
         \App\Models\Defi::insert
         ([
             'title' => $requete->titre, 
