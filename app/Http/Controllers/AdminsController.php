@@ -37,9 +37,9 @@ class AdminsController extends Controller
         
         //craft de la bonne adresse du zip 
         $nom_zip_tmp = "defi_".$id.".zip";
-        $adresse_zip_tmp = "//tmp//".$nom_zip_tmp;
-        
-        $requete->file('defi_zip')->move("//tmp//", $adresse_zip_tmp);
+        $adresse_zip_tmp = "/tmp/".$nom_zip_tmp;
+
+        $requete->file('defi_zip')->move("/tmp/", $adresse_zip_tmp);
 
         $zip=new ZipArchive;
         $zip->open($adresse_zip_tmp);
