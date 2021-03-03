@@ -43,7 +43,7 @@ class AdminsController extends Controller
 
         $zip=new ZipArchive;
         $zip->open($adresse_zip_tmp);
-        $zip->extractTo(env('STOCKAGE_DEFI', "").$requete->categorie."defi_".$id);
+        $zip->extractTo(env('STOCKAGE_DEFI', "").$requete->categorie."/defi_".$id);
 
 
         // $dossier_zip =  env('STOCKAGE_DEFI', '').$requete->categorie;
