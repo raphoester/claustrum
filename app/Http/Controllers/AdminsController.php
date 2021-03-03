@@ -36,9 +36,10 @@ class AdminsController extends Controller
         $requete->url = env('URL_DEFI', "localhost/defis_claustrum/").$requete->categorie."/defi_".$id;
         
         //craft de la bonne adresse du zip 
-        $adresse_zip_tmp = "/tmp/defi_".$id.".zip";
-
-        $requete->file('defi_zip')->move($adresse_zip_tmp);
+        $nom_zip_tmp = "defi_".$id.".zip";
+        $adresse_zip_tmp = "//tmp//".$nom_zip_tmp;
+        
+        $requete->file('defi_zip')->move("//tmp//", $adresse_zip_tmp);
 
         $zip=new ZipArchive;
         $zip->open($adresse_zip_tmp);
